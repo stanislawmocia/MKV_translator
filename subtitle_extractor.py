@@ -2,6 +2,7 @@
 Module for extracting subtitles from MKV and other media files.
 """
 import os
+import json
 import subprocess
 from pathlib import Path
 from typing import Optional, List

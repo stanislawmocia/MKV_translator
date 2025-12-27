@@ -127,8 +127,8 @@ class SubtitleParser:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # Remove WEBVTT header
-        content = re.sub(r'^WEBVTT\s*\n.*?\n\n', '', content, flags=re.DOTALL)
+        # Remove WEBVTT header (just the first line)
+        content = re.sub(r'^WEBVTT\s*\n', '', content)
 
         # Split into blocks
         blocks = re.split(r'\n\n+', content.strip())
