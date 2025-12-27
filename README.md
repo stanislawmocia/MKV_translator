@@ -223,6 +223,55 @@ MKV_translator/
 └── README.md              # Ta dokumentacja
 ```
 
+## Testy
+
+Projekt zawiera kompleksowy zestaw testów jednostkowych i integracyjnych.
+
+### Uruchomienie testów
+
+**Podstawowe uruchomienie:**
+```bash
+pytest tests/ -v
+```
+
+**Z raportem pokrycia kodu:**
+```bash
+pytest tests/ -v --cov=. --cov-report=html
+```
+
+**Tylko szybkie testy (bez integracyjnych):**
+```bash
+pytest tests/ -v -m "not slow"
+```
+
+**Konkretny moduł:**
+```bash
+pytest tests/test_subtitle_parser.py -v
+```
+
+### Statystyki testów
+
+- **64 testy** pokrywające wszystkie główne funkcjonalności
+- **84% pokrycia kodu**
+- Testy jednostkowe dla każdego modułu
+- Testy integracyjne dla pełnego workflow
+
+### Struktura testów
+
+```
+tests/
+├── conftest.py                  # Wspólne fixtures
+├── test_subtitle_parser.py      # 18 testów parsowania napisów
+├── test_batch_optimizer.py      # 14 testów inteligentnego batchowania
+├── test_translator.py           # 12 testów tłumaczenia API
+├── test_subtitle_extractor.py   # 12 testów ekstrakcji z wideo
+└── test_integration.py          # 8 testów integracyjnych
+```
+
+### Coverage HTML Report
+
+Po uruchomieniu testów z flagą `--cov-report=html`, raport HTML zostanie wygenerowany w `htmlcov/index.html`. Otwórz go w przeglądarce aby zobaczyć szczegółowe pokrycie każdej linii kodu.
+
 ## Rozwiązywanie problemów
 
 ### Brak mkvextract lub ffmpeg
