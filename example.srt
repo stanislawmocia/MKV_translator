@@ -1,0 +1,27 @@
+1
+00:00:01,000 --> 00:00:03,500
+Hello, how are you today?
+
+2
+00:00:04,000 --> 00:00:06,500
+I'm doing great, thank you!
+
+3
+00:00:12,000 --> 00:00:15,500
+This is a longer gap scene.
+
+4
+00:00:16,000 --> 00:00:18,500
+Let's continue the conversation.
+
+5
+00:00:19,000 --> 00:00:22,000
+What do you think about the weather?
+
+6
+00:00:28,000 --> 00:00:31,500
+Another scene after a gap.
+
+7
+00:00:32,000 --> 00:00:35,000
+This demonstrates intelligent batching.
